@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Select Payment Method";
+}
+<h2>Select Payment Method</h2>
+<form method="post" action="/Payment/Process">
+    <label>Amount:</label>
+    <input type="number" step="0.01" name="amount" required />
+    <br /><br />
+    <label>Payment Type:</label>
+    <select name="paymentType">
+        <option value="paypal">PayPal</option>
+        <option value="creditcard">Credit Card</option>
+        <option value="bank">Bank Transfer</option>
+    </select>
+    <br /><br />
+    <input type="submit" value="Pay" />
+</form>
